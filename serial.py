@@ -20,7 +20,7 @@ class SerialGenerator:
     100
     """
     def __init__(self, start):
-        """ Create a generator from starting from start """
+        """ Create a generator starting from start """
         self.start = start
         self.orignal_value = start
 
