@@ -1,16 +1,24 @@
 from WordFinder import WordFinder
 
-
 class RandomWordFinder(WordFinder):
     """ 
     A subclass of WordFinder used to get a random word from a file on disk 
     but exclude blank lines and comments.
-    """
     
-    def __init__(self, path):
-        """ Get parent class ['super()'], call its '__init__()' """
-        super().__init__(path)
-        
+    >>> rwf = RandomWordFinder("comment.txt")
+    4 words read
+
+    >>> rwf.random() in rwf.read_file()
+    True
+
+    >>> rwf.random() in ["kale", "parsnips", "apple", "mango"]
+    True
+
+    >>> rwf.random() in ["kale", "parsnips", "apple", "mango"]
+    True
+
+    """
+            
     def read_file(self):
         """ Read file and return list items without strings of spaces and comments """
         

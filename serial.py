@@ -1,7 +1,6 @@
-"""Python serial number generator."""
-
 class SerialGenerator:
-    """Machine to create unique incrementing serial numbers.
+    """ 
+    Machine to create unique incrementing serial numbers.
     
     >>> serial = SerialGenerator(start=100)
     

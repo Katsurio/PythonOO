@@ -1,6 +1,5 @@
 from random import choice
 
-
 class WordFinder:
     """ 
     A class used to get a random word from a file on disk
@@ -14,6 +13,7 @@ class WordFinder:
         """ Create a random word from a file """
         self.path = path
         self.words = self.read_file() 
+        print(f"{len(self.words)} words read")
         
     def read_file(self):
         """ Read file and return list of words"""
