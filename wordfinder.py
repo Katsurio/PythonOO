@@ -11,19 +11,19 @@ class WordFinder:
     """
     
     def __init__(self, path):
-        # Create a random word from a file
+        """ Create a random word from a file """
         self.path = path
         self.words = self.read_file() 
         
     def read_file(self):
-        # Read file and return list of words
+        """ Read file and return list of words"""
         try:
             return self.get_words()
         except FileNotFoundError as exc:
             print(f'File {exc} does not exist')
             
     def get_words(self):
-        # Get list of words from file
+        """ Get list of words from file """
         count = 0
         words = []
         
@@ -35,5 +35,5 @@ class WordFinder:
                 return words
             
     def random(self):
-        # Returns a random word from the word list
+        """ Returns a random word from the word list """
         return choice(self.words)

@@ -8,11 +8,11 @@ class RandomWordFinder(WordFinder):
     """
     
     def __init__(self, path):
-        # Get parent class ['super()'], call its '__init__()'
+        """ Get parent class ['super()'], call its '__init__()' """
         super().__init__(path)
         
     def read_file(self):
-        # Read file and return list items without strings of spaces and comments
+        """ Read file and return list items without strings of spaces and comments """
         
         # Strip comments
         word_list = [word for word in super().read_file() if not word.startswith('#')]
